@@ -100,49 +100,47 @@
       background: var(--lavender-light);
       overflow: hidden;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
-      padding: 5rem 3rem 0;
     }
 
-    /* lavender blob behind image */
+    /* isompi lavender-rengas kuvan taakse */
     .hero-image-col::before {
       content: '';
       position: absolute;
-      bottom: -60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 340px;
-      height: 340px;
+      width: 540px;
+      height: 540px;
       border-radius: 50%;
       background: var(--lavender);
-      opacity: 0.35;
+      opacity: 0.45;
     }
 
-    /* top decorative dots */
+    /* keltainen piste ylävasemmalle */
     .hero-image-col::after {
       content: '';
       position: absolute;
       top: 2.5rem;
       left: 2.5rem;
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: var(--yellow);
-      opacity: 0.55;
+      opacity: 0.6;
+      z-index: 2;
     }
 
+    /* kuva ympyrässä */
     .hero-image-col img {
       position: relative;
-      width: 78%;
-      max-width: 320px;
-      height: auto;
+      width: 460px;
+      height: 460px;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 10%;
       display: block;
       filter: saturate(0.92);
-      border-radius: 160px 160px 0 0;
+      border-radius: 50%;
       z-index: 1;
+      box-shadow: 0 12px 48px rgba(184, 168, 212, 0.4);
     }
 
     .hero-image-overlay { display: none; }
@@ -158,16 +156,17 @@
       z-index: 2;
     }
 
-    /* small lavender circle top right of image col */
+    /* pieni laventeli rengas oikealle */
     .hero-lavender-circle {
       position: absolute;
-      top: 3rem;
-      right: 2rem;
-      width: 70px;
-      height: 70px;
+      bottom: 3rem;
+      right: 2.5rem;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       border: 2px solid var(--lavender);
-      opacity: 0.6;
+      opacity: 0.7;
+      z-index: 2;
     }
 
     .hero-text-col {
@@ -879,18 +878,16 @@
         min-height: auto;
       }
       .hero-image-col {
-        height: auto;
-        min-height: 55vw;
         order: -1;
-        padding: 3rem 2rem 0;
-        align-items: flex-end;
+        min-height: 72vw;
+        padding: 0;
       }
       .hero-image-col img {
-        width: 65%;
-        max-width: 240px;
-        border-radius: 120px 120px 0 0;
+        width: 58vw;
+        height: 58vw;
+        border-radius: 50%;
       }
-      .hero-image-col::before { width: 220px; height: 220px; bottom: -40px; }
+      .hero-image-col::before { width: 64vw; height: 64vw; }
       .hero-lavender-circle { display: none; }
       .hero-accent-strip { height: 3px; }
       .hero-text-col { padding: 2.5rem 1.25rem 3.5rem; }
